@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="application/javascript" src="rbar.js"></script>
+</head>
+<body>
+
+<canvas id="myCanvas" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+<script type="application/javascript">
+	
+
+	//var data = [{'Product 1': 90}, {'Product 2': 80}, {'Product 3': 65}, {'Product 4': 100}, {'Product 5': 55}];	
+	//var data = [{'Product 1': {'Prd 1': 110, 'Prd 2': 70}}, {'Product 2': {'Sub-prd 1': 110, 'Sub-prd 2': 70, 'Sub-prd 3': 60}}, {'Product 3': 65}, {'Product 4': 100}, {'Product 5': 55}];	
+	var data = [{'Product 1': {'Prd 1': 2, 'Prd 2': 1}}, {'Product 2': {'Sub-prd 1': 1, 'Sub-prd 2': 1, 'Sub-prd 3': 2}}, {'Product 3': 2}, {'Product 4': 1}, {'Product 5': 1}];
+	
+	var barcolor = ['#5c5fff', '#bb48e6', '#f12bc3', '#ff1f9c', '#ff3c75', '#ff6250', '#ff862d', '#ffa600', '#4CAF75', '#ff7354', '#ff8044'];
+	
+	var obj = {
+				barId: 'myCanvas',
+				barData: data,
+				barColour: barcolor,
+				barStroke: 40,
+				barSpaces: 80,
+				barInnerPadding: 80,
+				barDivisionPositionFromLineX: 20,
+				barDivisionPositionFromLineY: 10,
+				barAnimation: true,
+				barAnimationSpeed: 1,
+				barTextFont: "14px Arial",
+				//barDivision: null,
+				barScaleDivisionReqX: true,
+				barScaleDivisionReqY: true,
+				//barScaleDivisionY: 0.4,
+				//barScaleDivisionWidth: 1,
+				barScaleDivisionColour: '#333',
+				barAxisLineWidth: 2,
+				barAxisLineColour: '#333',
+				//barMaxHeight: null,
+				barGroupPadding: 1,
+				barXAxisTextRotate: 45
+			};
+	
+	generateBarGraph(obj);
+	
+	
+</script>
+
+
+</body>
+</html>
